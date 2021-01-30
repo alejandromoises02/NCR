@@ -1,29 +1,32 @@
-import './App.css';
-import {CuentasProvider} from './context/CuentasContext';
-import Plantilla from './components/Plantilla';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter, Route, Switch} from 'react-router-dom';
-import CuentaDetailContainer from './components/CuentaDetailContainer';
+import "./App.css";
+import { CuentasProvider } from "./context/CuentasContext";
+import Home from "./components/Home";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import CuentaDetailContainer from "./components/CuentaDetailContainer";
+import { PaginaProvider } from "./context/PaginaContext";
 
 function App() {
   return (
     <div className="App">
-      <main>
-        <CuentasProvider>
-        <BrowserRouter>
+      <main className="container">
+        <PaginaProvider>
+          <CuentasProvider>
+            <BrowserRouter>
+              <Switch>
 
-        <Switch>
-          <Route exact path='/'>
-          <Plantilla/>
-          </Route>
+                <Route exact path="/">
+                  <Home />
+                </Route>
 
-          <Route exact path='/cuenta/:number'>
-            <CuentaDetailContainer/>
-          </Route>
-          </Switch>
+                <Route exact path="/cuenta/:number">
+                  <CuentaDetailContainer />
+                </Route>
 
-        </BrowserRouter> 
-        </CuentasProvider>
+              </Switch>
+            </BrowserRouter>
+          </CuentasProvider>
+        </PaginaProvider>
       </main>
     </div>
   );
