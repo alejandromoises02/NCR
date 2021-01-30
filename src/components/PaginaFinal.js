@@ -17,7 +17,7 @@ const PaginaFinal = () => {
     <>
       <nav aria-label="Page navigation example">
         <ul className="row pagination">
-          <li key={"prev"} className="page-item col-4">
+          <li key={"prev"} className="page-item col-4 cuadriculas">
             <Link onClick={(e) => decrementar(e)} className="page-link" to={"/"}>
               Opciones Anteriores
             </Link>
@@ -32,7 +32,7 @@ const PaginaFinal = () => {
                   {element.description !== "desconocida" &&
                   element.id > (pagina - 1) * 4 ? (
                     <>
-                      <li key={element.id} className="page-item col-4">
+                      <li key={element.id} className="page-item col-4 cuadriculas">
                         <Link
                           className="page-link"
                           key={element.number}

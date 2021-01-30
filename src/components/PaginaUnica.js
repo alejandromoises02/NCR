@@ -19,7 +19,7 @@ const PaginaUnica = () => {
                 <>
                   {element.description !== "desconocida" ? (
                     <>
-                      <li key={element.id} className="page-item col-4">
+                      <li key={element.id} className="page-item col-4 cuadriculas">
                         <Link
                           className="page-link"
                           key={element.number}
