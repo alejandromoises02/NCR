@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 
 const Home =()=>{
 
-
-  const [cuentas, setCuentas] = useContext(CuentasContext);
+    
+    const [cuentas, setCuentas] = useContext(CuentasContext);
  
   
 return (
@@ -17,8 +17,10 @@ return (
     <div>
         
         {cuentas.map((element, index) => (
+
             <>
-            {element.description !== "desconocida" ? 
+            
+            {element.description !== "desconocida" && element.id<=4 ?
             <>
             <li class="page-item">
                 <Link class="page-link" key={index} to={'/cuenta/'+element.number}>{element.description} nro: {element.number}</Link>

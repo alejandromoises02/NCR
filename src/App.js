@@ -22,10 +22,6 @@ function App() {
           </Route>
           </Switch>
 
-
-
-
-
         </BrowserRouter> 
         </CuentasProvider>
       </main>

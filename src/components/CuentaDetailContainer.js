@@ -19,7 +19,7 @@ const [cuentas, setCuentas] = useContext(CuentasContext);
 
   return (
     <>
-      <h2>Tipo de cuenta: {cuenta.description} numero {cuenta.number}</h2>
+      <h2>Tipo de cuenta:{cuenta.description} numero {cuenta.number}</h2>
       <h2>Saldo: {cuenta.saldo} {cuenta.moneda}</h2>
     </>
   );
